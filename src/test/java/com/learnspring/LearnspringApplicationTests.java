@@ -1,4 +1,4 @@
-package com.zhou.learnspring;
+package com.learnspring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

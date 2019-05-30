@@ -1,4 +1,4 @@
-package com.zhou.learnspring;
+package com.learnspring;
 
 public class BookNotFoundException extends RuntimeException {
 

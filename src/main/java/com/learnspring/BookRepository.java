@@ -1,4 +1,4 @@
-package com.zhou.learnspring;
+package com.learnspring;
 
 import org.springframework.data.repository.CrudRepository;
 
