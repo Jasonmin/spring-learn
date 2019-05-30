@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
-@RestControllerAdvice
-public class ExceptionController {
 
+public class ExceptionController {
+//    @RestControllerAdvice
     // 捕捉shiro的异常
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     @ExceptionHandler(ShiroException.class)
