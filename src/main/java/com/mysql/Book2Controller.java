@@ -17,16 +17,19 @@ public class Book2Controller {
     ResWrapper resWrapper;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public HashMap<String,Object> getBooks() {
+    public ResponseResult getBooks() {
         List<Book> dataList = bookService.getBookList();
-        int res = 1;
+        boolean res = true;
         if (dataList == null) {
-            res = 0;
+            res = false;
         }
-        return resWrapper.wrapResultData(res,dataList);
+//        return resWrapper.wrapResultData(res,dataList);
+
+        return new ResponseResult(0,res,"msg",dataList);
     }
 
-    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/abook/{id}",method = RequestMethod.GET)
     public Book getBookById(@PathVariable("id") int bookId) {
         return bookService.findBookById(bookId);
     }
