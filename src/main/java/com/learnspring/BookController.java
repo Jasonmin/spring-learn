@@ -13,6 +13,11 @@ public class BookController {
     @Autowired
     private BookRepository bookRepository;
 
+    @GetMapping("/test")
+    public String bookTest() {
+        return "bookTest";
+    }
+
     @GetMapping
     public Iterable findAll() {
         return bookRepository.findAll();
