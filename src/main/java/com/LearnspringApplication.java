@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = {"com.jdbc","com.learnspring"})
 @ComponentScan(basePackages = {"com.jdbc","com.learnspring"})
 @SpringBootApplication
+//@EnableAdminServer
 public class LearnspringApplication {
 
     public static void main(String[] args) {
