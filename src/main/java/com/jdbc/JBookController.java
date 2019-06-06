@@ -1,16 +1,10 @@
 package com.jdbc;
 
-import com.mysql.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sun.tools.jstat.Literal;
 
 import java.util.List;
 import java.util.Optional;
@@ -47,4 +41,14 @@ public class JBookController {
 //    public Page<JBook> getPage(@PageableDefault(value = 3, sort = {"id"}, direction = Sort.Direction.DESC)Pageable pageable) {
 //        return jBookRepository.findPage(pageable);
 //    }
+
+    @RestController
+    public static class JwtController {
+
+
+        @GetMapping("/jwtTest")
+        public String test() {
+            return "jwtTest";
+        }
+    }
 }
